@@ -8,7 +8,7 @@ import { useSession } from 'next-auth/client';
 import { getPrismicClient } from '../../../services/prismic';
 
 import styles from '../post.module.scss';
-import { useRouter } from 'next/dist/client/router';
+import { useRouter } from 'next/router';
 
 interface Post {
   slug: string;
@@ -47,7 +47,7 @@ export default function PostPreview({ post }: PostPreviewProps) {
           />
 
           <div className={styles.continueReading}>
-            Wanna contie reading?
+            Wanna continue reading?
             <Link href="/">
               <a>Subscribe now</a>
             </Link>
